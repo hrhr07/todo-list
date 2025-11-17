@@ -1,11 +1,56 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo List</title>
+    <title>To Do</title>
   </head>
   <body>
-    <h1>Hola desde Webpack</h1>
+    <h1>To Do List</h1>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <button id="addProject">+ New Project</button>
+      <div id="project-list"></div>
+    </section>
+
+    <section id="tasks" style="display: none">
+      <h2 id="currentProject"></h2>
+      <button id="backbtn">Back</button>
+      <button id="addTask">+ New Task</button>
+      <ul id="task-list"></ul>
+    </section>
+
+    <dialog id="favDialog">
+      <form id="taskForm" method="dialog">
+        <div id="content">
+          <label>
+            Title:
+            <input id="title" type="text" required />
+          </label>
+          <label>
+            Description:
+            <input id="description" type="text" />
+          </label>
+          <label>
+            Due Date:
+            <input id="date" type="date" />
+          </label>
+          <label>
+            Priority:
+            <select id="priority" required>
+              <option value="">Select priority</option>
+              <option value="High">High</option>
+              <option value="Medium">Medium</option>
+              <option value="Low">Low</option>
+            </select>
+          </label>
+
+          <div>
+            <button id="confirmBtn" value="default">Confirm</button>
+          </div>
+        </div>
+      </form>
+    </dialog>
   </body>
 </html>
